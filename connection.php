@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'app_survey');
+$conn = mysqli_connect('localhost', 'root', '', 'db_lokasi');
 function query($data)
 {
     global $conn;
@@ -13,5 +13,5 @@ function query($data)
 
 function get_head_survey()
 {
-    return query("SELECT distinct(a.nama_toko), a.*  FROM head_survey as a group by a.nama_toko");
+    return query("SELECT *  FROM maps");
 }
